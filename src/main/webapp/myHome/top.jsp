@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href=./template.jsp?page=../login>Login</a>
+<a href=index.jsp?page=../login>Login</a>
 <a href=join.jsp>Join</a>
 </body>
 </html>

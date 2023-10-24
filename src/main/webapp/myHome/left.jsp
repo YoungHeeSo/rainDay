@@ -8,8 +8,8 @@
 </head>
 <body>
 <center>
-<a href="./template.jsp?page=newitem">신상품</a>
-<a href="./template.jsp?page=bestitem">인기상품</a>
+<a href="index.jsp?page=newitem">신상품</a><br>
+<a href="index.jsp?page=bestitem">인기상품</a><br>
 </center>
 </body>
 </html>
