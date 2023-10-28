@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+table{
+	margin: auto;
+	width: 960px;
+	color: gray;
+	border: 3px solid gray;
+}

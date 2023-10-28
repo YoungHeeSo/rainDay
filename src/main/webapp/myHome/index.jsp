@@ -9,16 +9,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Template Test</title>
-<style>
-table{
-	margin: auto;
-	width: 960px;
-	color: gray;
-	border: 1px solid gray;
-}
-</style>
+
+<link href="../css/index.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
+
 <table>
 	<tr>
 		<td height="43" colspan=3 align=left>
@@ -33,12 +29,12 @@ table{
 			<jsp:include page='<%=pagefile+".jsp" %>'/>
 		</td>
 	</tr>
-	
 	<tr>
 		<td width="100%" height="40" colspan="3">
 			<jsp:include page="bottom.jsp"/>
 		</td>
 	</tr>
 </table>
+
 </body>
 </html>
