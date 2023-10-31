@@ -1,9 +1,6 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="beans.member"%>
-<%@ page import="java.sql.*" %>
-
+    <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +10,9 @@
 <body>
 
 	<%request.setCharacterEncoding("UTF-8");%>
-	<jsp:useBean id="m" class="beans.member"/>
-	<jsp:setProperty property="*" name="m"/>
-	이름은 <jsp:getProperty property="name" name="m"/>
+		<jsp:useBean id="m" class="beans.member"/>
+		<jsp:setProperty property="*" name="m"/>
+		이름은 <jsp:getProperty property="name" name="m"/>
 	<%
 		Connection con = null;
 		String url = "jdbc:mysql://localhost:3306/myweb";
@@ -28,19 +25,25 @@
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, "root", "1234");
 			
-			sql = "insert into member values(?,?,?,?,?,?)";
+			sql = "update member set name=?, age=?, password=?, email=?, gender=? where id=?";
+			
 			ps = con.prepareStatement(sql);
-			ps.setString(1, m.getId());
-			ps.setString(2, m.getPassword());
-			ps.setString(3, m.getName());
-			ps.setInt(4, m.getAge());
+			
+			ps.setString(1, m.getName());
+			ps.setInt(2, m.getAge());
+			ps.setString(3, m.getPassword());
+			ps.setString(4, m.getEmail());
 			ps.setString(5, m.getGender());
-			ps.setString(6, m.getEmail());
+			ps.setString(6, m.getId());
 			
-			int insert = ps.executeUpdate(); // 업데이트가 되었다면 한명인 1, 오류라면 0
+			int a = ps.executeUpdate(); // 업데이트가 되었다면 한명인 1, 오류라면 0
 			
-			if(insert == 1)
-				response.sendRedirect("index.jsp"); //메인 페이지 주소 이름 설정 index
+			if(a == 1){
+				
+				session.setAttribute("name", m.getName());
+				response.sendRedirect("index.jsp?page=infoView"); //메인 페이지 주소 이름 설정 index
+			}
+				
 			else{
 				%>
 				<script>
@@ -57,5 +60,6 @@
 			
 		}
 	%>
+
 </body>
 </html>
