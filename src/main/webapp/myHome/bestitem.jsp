@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div>
 <b>인기상품 목록입니다.</b>
+</div>
 </body>
 </html>

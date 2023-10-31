@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="fot">
 <center>Since 2008 &copy; 충남도립대학교</center>
+</div>
 </body>
 </html>
