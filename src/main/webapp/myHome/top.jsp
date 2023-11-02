@@ -34,8 +34,6 @@
 
 <style>
 .top a {
-	/* display: flex; 
-	flex-flow:row nowrap; */
 
 	text-decoration-line: none;
 	

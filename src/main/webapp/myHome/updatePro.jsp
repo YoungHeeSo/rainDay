@@ -25,15 +25,15 @@
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, "root", "1234");
 			
-			sql = "update member set name=?, age=?, password=?, email=?, gender=? where id=?";
+			sql = "update member set password=?, name=?, age=?, gender=?, email=? where id=?";
 			
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, m.getName());
-			ps.setInt(2, m.getAge());
-			ps.setString(3, m.getPassword());
-			ps.setString(4, m.getEmail());
-			ps.setString(5, m.getGender());
+			ps.setString(1, m.getPassword());
+			ps.setString(2, m.getName());
+			ps.setInt(3, m.getAge());
+			ps.setString(4, m.getGender());
+			ps.setString(5, m.getEmail());
 			ps.setString(6, m.getId());
 			
 			int a = ps.executeUpdate(); // 업데이트가 되었다면 한명인 1, 오류라면 0

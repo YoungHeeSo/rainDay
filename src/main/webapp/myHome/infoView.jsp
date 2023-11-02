@@ -39,39 +39,38 @@
 			
 			e.printStackTrace();
 		}
-
 	%>
 	
 	<form action="updatePro.jsp" method="post">
 	  
-		이름: 
-		<input type="text" name="name" value=<%=rs.getString("name") %>/><br>
-		나이: 
-		<input type="number" name="age" value=<%=rs.getInt("age") %>/><br>
 		아이디: 
-		<input type="text" name="id" value=<%=rs.getString("id") %> readonly/><br>
+		<input type="text" name="id" value=<%=rs.getString("id") %> readonly /><br>
 		비밀번호: 
-		<input type="password" name="password" value=<%=rs.getString("password") %>/><br>
-		이메일: 
-		<input type="text" name="email" value=<%=rs.getString("email") %>/><br>
+		<input type="password" name="password" value=<%=rs.getString("password") %> /><br>
+		이름: 
+		<input type="text" name="name" value=<%=rs.getString("name") %> /><br>
+		나이: 
+		<input type="number" name="age" value=<%=rs.getInt("age") %> /><br>
 		성별: 
 		<%
 			if(rs.getString("gender").equals("남자")){
 			
 		%>
-		<input type="radio" name="gender" value="남자" checked/>남성
-		<input type="radio" name="gender" value="여자"/>여성<br>
+		<input type="radio" name="gender" value="남자" checked />남성
+		<input type="radio" name="gender" value="여자" />여성<br>
 		<%
 			}else{
 		%>
-		<input type="radio" name="gender" value="남자"/>남성
-		<input type="radio" name="gender" value="여자" checked/>여성<br>
+		<input type="radio" name="gender" value="남자" />남성
+		<input type="radio" name="gender" value="여자" checked />여성<br>
 		<%
 			}
 		%>
+		이메일: 
+		<input type="text" name="email" value=<%=rs.getString("email") %> /><br>
 		
 		<input type="submit" value="회원정보 수정"/> 
-		<input type="button" value="회원 탈퇴" onClick="location.href='delete.jsp'"/>
+		<input type="button" value="회원 탈퇴" onClick="location.href='delete.jsp'" />
 		
 	</form> 
 	
