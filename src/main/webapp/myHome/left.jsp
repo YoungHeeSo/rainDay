@@ -28,6 +28,8 @@
 <div class=left>
 	<a href="index.jsp?page=newitem">신상품</a>
 	<a href="index.jsp?page=bestitem">인기상품</a>
+	<a href="#">게시판</a>
+	<a href="boardWriteForm.bo">게시판 글쓰기</a>
 </div>
 </center>
 </body>

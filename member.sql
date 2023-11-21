@@ -1,4 +1,5 @@
 
+
 create table member(
 	id varchar(15) primary key,
 	password varchar(10) not null,
@@ -11,3 +12,4 @@ create table member(
 desc member;
 
 select * from member;
+select * from BOARD;
